@@ -1,5 +1,6 @@
 ![alt text](https://github.com/gotr00t0day/oswalkpy/blob/master/gitoswalk.png)
 
+[![HitCount](http://hits.dwyl.io/gotr00t0day/oswalkpy.svg)](http://hits.dwyl.io/gotr00t0day/oswalkpy)
 
 # INSTALLATION
 
