@@ -14,7 +14,7 @@ python3 oswalkpy
 ```
 ## USAGE
 
-```bash
+```
 
 .help:         (Get a list of all commands")
 .all:          (A directory tree for all files.)
@@ -22,4 +22,4 @@ python3 oswalkpy
 .txt:          (Search for .txt files)
 .py:           (Search for .py files)
 .delext        (Deletes all .extension files)
-
+```
