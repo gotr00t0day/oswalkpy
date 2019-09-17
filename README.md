@@ -5,7 +5,7 @@
 # INSTALLATION
 
 ```bash
-python3 pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 git clone https://github.com/gotr00t0day/oswalkpy.git
 
