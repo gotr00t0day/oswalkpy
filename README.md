@@ -2,6 +2,8 @@
 
 [![HitCount](http://hits.dwyl.io/gotr00t0day/oswalkpy.svg)](http://hits.dwyl.io/gotr00t0day/oswalkpy)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f85b7f0ab7f4021a63a0c4ad6f13854)](https://www.codacy.com/manual/gotr00t0day/oswalkpy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gotr00t0day/oswalkpy&amp;utm_campaign=Badge_Grade)
+
 # INSTALLATION
 
 ```bash
