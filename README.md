@@ -19,7 +19,7 @@ python3 oswalkpy
 
 .help:         (Get a list of all commands")
 .all:          (A directory tree for all files.)
-.filesearch:   (Search for a file)\n\n")
+.filesearch:   (Search for a file")
 .txt:          (Search for .txt files)
 .py:           (Search for .py files)
 .delext        (Deletes all .extension files)
