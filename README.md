@@ -12,5 +12,14 @@ cd oswalkpy
 
 python3 oswalkpy
 ```
+## USAGE
 
+```bash
+
+.help:         (Get a list of all commands")
+.all:          (A directory tree for all files.)
+.filesearch:   (Search for a file)\n\n")
+.txt:          (Search for .txt files)
+.py:           (Search for .py files)
+.delext        (Deletes all .extension files)
 
