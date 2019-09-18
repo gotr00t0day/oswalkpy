@@ -113,8 +113,7 @@ text.insert(END, "\n")
 text.insert(END, "\t.help: \t\t(Get a list of all commands.)\n\n")
 text.insert(END, "\t.all: \t\t(A directory tree for all files.)\n\n")
 text.insert(END, "\t.filesearch: \t\t(Search for a file)\n\n")
-text.insert(END, "\t.txt: \t\t(Search for .txt files)\n\n")
-text.insert(END, "\t.py: \t\t(Search for .py files)\n\n")
+text.insert(END, "\t.ext: \t\t(Search for files with *.ext)\n\n")
 text.insert(END, "\t.delext \t\t(Deletes all .extension files)\n\n")
 
 def commands():
@@ -124,8 +123,7 @@ def commands():
     text.insert(END, "\t.help: \t\t(Get a list of all commands.)\n\n")
     text.insert(END, "\t.all: \t\t(A directory tree for all files.)\n\n")
     text.insert(END, "\t.filesearch: \t\t(Search for a file)\n\n")
-    text.insert(END, "\t.txt: \t\t(Search for .txt files)\n\n")
-    text.insert(END, "\t.py: \t\t(Search for .py files)\n\n")
+    text.insert(END, "\t.ext: \t\t(Search for files with *.ext)\n\n")
     text.insert(END, "\t.delext \t\t(Deletes all .extension files)\n\n")
 
 def allfiles():
@@ -169,10 +167,11 @@ def find():
                 text.insert(END, '\t┗━━━━━━\t{}'.format(fileName))
                 text.insert(END, "\n")
 
-def txtfiles(): 
+def extension(): 
     text.delete("1.0", END)
     lblfilecount.config(text="")
     directory = askstring(".txt", "Directory Name")
+    extension =askstring("*.ext", "Extension")
     file_count = tkinter.StringVar()
     file_count.set(sum(len(files) for _, _, files in os.walk(directory)))
     lblfilecount.config(textvariable=file_count)
@@ -181,23 +180,7 @@ def txtfiles():
         text.insert(END, "[DIR]: {}".format(dirpath))
         text.insert(END, "\n")    
         for filename in files:
-            if filename.endswith(".txt"):            
-                text.insert(END, '\t┗━━━━━━\t{}'.format(filename))
-                text.insert(END, "\n")
-
-def searchpy():
-    text.delete("1.0", END)
-    lblfilecount.config(text="")
-    directory = askstring(".py", "Directory Name")
-    file_count = tkinter.StringVar()
-    file_count.set(sum(len(files) for _, _, files in os.walk(directory)))
-    lblfilecount.config(textvariable=file_count)    
-    for dirpath, dirnames, files in os.walk(directory, topdown=False):
-        text.insert(END, "\n")
-        text.insert(END, "[DIR]: {}".format(dirpath))
-        text.insert(END, "\n")
-        for filename in files:
-            if filename.endswith(".py"):
+            if filename.endswith(extension):            
                 text.insert(END, '\t┗━━━━━━\t{}'.format(filename))
                 text.insert(END, "\n")
 
@@ -210,10 +193,8 @@ def search():
     lblfilecount.config(text="")
     if dirtext.get("1.0", 'end-1c') == ".help":
         commands()
-    if dirtext.get("1.0", 'end-1c') == ".txt":
-        txtfiles()
-    elif dirtext.get("1.0", 'end-1c') == ".py":
-        searchpy()
+    if dirtext.get("1.0", 'end-1c') == ".ext":
+        extension()
     elif dirtext.get("1.0", 'end-1c') == ".filesearch":
         find()
     elif dirtext.get("1.0", 'end-1c') == ".delext":
