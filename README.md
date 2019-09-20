@@ -6,6 +6,8 @@
 # INSTALLATION
 
 ```bash
+sudo apt install python3-tk
+
 pip3 install -r requirements.txt
 
 git clone https://github.com/gotr00t0day/oswalkpy.git
