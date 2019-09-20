@@ -9,7 +9,7 @@ import fnmatch
 
 root = Tk()
 root.title("OSWalkpy v1.0")
-root.geometry("510x420")
+root.geometry("510x440")
 root.resizable(0,0)
 
 labelframe = LabelFrame(root)
@@ -23,11 +23,11 @@ labelframe3.config(width=30, borderwidth=0, highlightthickness=0, padx=20, pady=
 labelframe3.grid(row=4, column=0)
 text = Text(root)
 dirtext = Text(labelframe)
-text.config(width=25, height=1)
+text.config(fg="white", width=25, height=1)
 dirtext.grid(column=1, row=1)
 dirtext.config(width=20, height=1)
 lblfilenum = Label(labelframe3, text="Files: ",  font=("Helvetica", 10))
-lblfilenum.config(fg="white")
+lblfilenum.config()
 lblfilenum.grid(column=0, row=3)
 lblfilecount = Label(labelframe3, text="",  font=("Helvetica", 10))
 lblfilecount.config(fg="green")
@@ -51,7 +51,7 @@ photoC = ImageTk.PhotoImage(clearImg)
 def About():
     top = Toplevel()
     top.title("About")
-    top.geometry("350x450")
+    top.geometry("350x460")
     root.resizable(0,0)
     
     today = date.today()
@@ -62,47 +62,47 @@ def About():
     lblimage.grid(column=1, row=6)
 
     lbltitle = Label(top, text="OSWalkpy\n", font=("Helvetica", 17, "bold"))
-    lbltitle.config(fg="white", padx=5, pady=10)
+    lbltitle.config(padx=5, pady=10)
     lbltitle.grid(column=1, row=0)
 
     lblauthor = Label(top, text="Author: ", font=("Helvetica", 11))
-    lblauthor.config(fg="white", pady=10)
+    lblauthor.config(pady=10)
     lblauthor.grid(column=0, row=1)   
 
     lblauthor = Label(top, text="c0d3ninja", font=("Helvetica", 11))
-    lblauthor.config(fg="white", pady=10)
+    lblauthor.config(pady=10)
     lblauthor.grid(column=1, row=1)   
 
     lblversion2 = Label(top, text="Version: ", font=("Helvetica", 11))
-    lblversion2.config(fg="white", pady=10)
+    lblversion2.config(pady=10)
     lblversion2.grid(column=0, row=2) 
 
     lblversion2 = Label(top, text="1.0", font=("Helvetica", 11))
-    lblversion2.config(fg="white", pady=10)
+    lblversion2.config(pady=10)
     lblversion2.grid(column=1, row=2) 
 
     lbldiscord= Label(top, text="Discord: ", font=("Helvetica", 11))
-    lbldiscord.config(fg="white", pady=10)
+    lbldiscord.config(pady=10)
     lbldiscord.grid(column=0, row=3)   
 
     lbldiscord2 = Label(top, text="http://discord.gg/NBy2atu", font=("Helvetica", 11))
-    lbldiscord2.config(fg="white", pady=10)
+    lbldiscord2.config(pady=10)
     lbldiscord2.grid(column=1, row=3) 
 
     lblgithub = Label(top, text="Github: ", font=("Helvetica", 11))
-    lblgithub.config(fg="white", pady=10)
+    lblgithub.config(pady=10)
     lblgithub.grid(column=0, row=4)   
 
     lblgithub2 = Label(top, text="https://github.com/gotr00t0day", font=("Helvetica", 11))
-    lblgithub2.config(fg="white", pady=10)
+    lblgithub2.config(pady=10)
     lblgithub2.grid(column=1, row=4) 
 
     lbldate = Label(top, text="Date: ", font=("Helvetica", 11))
-    lbldate.config(fg="white", pady=10)
+    lbldate.config(pady=10)
     lbldate.grid(column=0, row=5)   
 
     lbldate2 = Label(top, text=d1, font=("Helvetica", 11))
-    lbldate2.config(fg="white")
+    lbldate2.config()
     lbldate2.grid(column=1, row=5) 
 
     top.mainloop()
@@ -220,11 +220,11 @@ text.config(yscrollcommand=scrollbar.set)
 
 menubar = Menu(root)
 
-filemenu = Menu(menubar, tearoff=0, activebackground="black")
+filemenu = Menu(menubar, tearoff=0)
 filemenu.add_command(label="Exit", command=root.quit)
 menubar.add_cascade(label="File", menu=filemenu)
 
-aboutmenu = Menu(menubar, tearoff=0, activebackground="black")
+aboutmenu = Menu(menubar, tearoff=0)
 aboutmenu.add_command(label="About", command=About)
 menubar.add_cascade(label="Help", menu=aboutmenu)
 
